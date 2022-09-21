@@ -13,7 +13,7 @@ pipeline{
 	}
 	stage('subir docker compose'){
 		steps{
-			sh 'docker compose up -D'
+			sh 'docker compose up --parallel'
 		}
 	}
 	stage('sleep para container'){
